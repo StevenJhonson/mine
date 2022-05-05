@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        height: 200vh;
+    }
+
+    .container h1 {
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+
+    .container .mine {
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+        justify-content: space-between;
+        background-color: aqua;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .container .mine label:hover {
+        color: red;
+    }
+
+    input {
+        display: none;
+    }
+
+    .container .mine2 {
+        width: 100%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 3fr);
+    }
+
+    .container .mine2 img {
+        width: 320px;
+        height: 320px;
+        margin-top: 30px;
+    }
+
+    #r1:checked ~ .container .mine2 .img {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+    #r2:checked ~ .container .mine2 .mountain {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+    #r3:checked ~ .container .mine2 .fruit {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+    #r4:checked ~ .container .mine2 .car {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+    #r5:checked ~ .container .mine2 .book {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+    #r6:checked ~ .container .mine2 .animal {
+        opacity: 1;
+        transform: rotate(360deg);
+        position: relative;
+    }
+
+
+
+
+    #r2:checked ~ .container .mine2 .fruit,
+    .car,
+    .book,
+    .animal {
+        opacity: 0;
+        transform: rotate(0);
+        position: absolute;
+    }
+
+    #r3:checked ~ .container .mine2 .mountain,
+    .car,
+    .book,
+    .animal {
+        opacity: 0;
+        transform: rotate(0);
+        position: absolute;
+    }
+
+    #r4:checked ~ .container .mine2 .mountain, .fruit,
+    .book,
+    .animal {
+        opacity: 0;
+        transform: rotate(0);
+        position: absolute;
+    }
+
+    #r5:checked ~ .container .mine2 .mountain,
+    .fruit,
+    .car,
+    .animal {
+        opacity: 0;
+        transform: rotate(0);
+        position: absolute;
+    }
+
+    #r6:checked ~ .container .mine2 .mountain,
+    .fruit,
+    .car,
+    .book {
+        opacity: 0;
+        transform: rotate(0);
+        position: absolute;
+    }
+    .img {
+        transition: 1s;
+    }
+</style>
+
+<body>
+    <input type="radio" name="image" id="r1" checked>
+    <input type="radio" name="image" id="r2">
+    <input type="radio" name="image" id="r3">
+    <input type="radio" name="image" id="r4">
+    <input type="radio" name="image" id="r5">
+    <input type="radio" name="image" id="r6">
+    <div class="container">
+        <h1>THATS MINE</h1>
+        <div class="mine">
+            <label for="r1">All</label>
+            <label for="r2">Mountain</label>
+            <label for="r3">Fruit</label>
+            <label for="r4">Car</label>
+            <label for="r5">Book</label>
+            <label for="r6">Animal</label>
+        </div>
+        <div class="mine2">
+            <div class="img mountain"> <img src="mountain1.jpg" alt=""> </div>
+            <div class="img animal"> <img src="animal1.jpg" alt=""> </div>
+            <div class="img fruit"> <img src="fruits1.jpg" alt=""> </div>
+            <div class="img book"> <img src="book1.jpg" alt=""> </div>
+            <div class="img car"> <img src="car1.jpg" alt=""> </div>
+            <div class="img mountain"> <img src="mountain2.jpg" alt=""> </div>
+            <div class="img book"> <img src="book2.jpg" alt=""> </div>
+            <div class="img animal"> <img src="animal2.jpg" alt=""> </div>
+            <div class="img car"> <img src="car2.jpg" alt=""> </div>
+            <div class="img fruit"> <img src="fruits2.jpg" alt=""> </div>
+            <div class="img mountain"> <img src="mountain3.jpg" alt=""> </div>
+            <div class="img car"> <img src="car3.jpg" alt=""> </div>
+            <div class="img animal"> <img src="animal3.jpg" alt=""> </div>
+            <div class="img fruit"> <img src="fruit3.jpg" alt=""> </div>
+            <div class="img book"> <img src="book3.jpg" alt=""> </div>
+        </div>
+    </div>
+</body>
+
+</html>
